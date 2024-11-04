@@ -1,0 +1,27 @@
+[
+    {
+        "nome": "ana",
+        "idade": "10",
+        "telefone": "1"
+    },
+    {
+        "nome": "josé",
+        "idade": "12",
+        "telefone": "2"
+    },
+    {
+        "nome": "João",
+        "idade": "15",
+        "telefone": "3"
+    },
+    {
+        "nome": "Anamaria",
+        "idade": "17",
+        "telefone": "5"
+    },
+    {
+        "nome": "Ana ",
+        "idade": "19",
+        "telefone": "6"
+    }
+]

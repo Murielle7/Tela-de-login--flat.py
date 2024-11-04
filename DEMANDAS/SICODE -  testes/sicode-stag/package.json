@@ -1,0 +1,19 @@
+{
+  "name": "app",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2",
+    "@hotwired/stimulus": "^3.2.2",
+    "@hotwired/turbo-rails": "^8.0.4",
+    "@josefarias/hotwire_combobox": "^0.3.1",
+    "@popperjs/core": "^2.11.8",
+    "@stimulus-components/rails-nested-form": "^5.0.0",
+    "bootstrap": "^5.3.3",
+    "esbuild": "^0.20.2",
+    "jquery": "^3.7.1",
+    "stimulus": "^3.2.2"
+  },
+  "scripts": {
+    "build": "esbuild app/javascript/application.js --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets"
+  }
+}

@@ -1,0 +1,38 @@
+version: '3.9'
+
+services:
+  web:
+    build: .
+    command: ["bash", "-c", "rm -f tmp/pids/server.pid && yarn install && bin/dev"]
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      # - bundle_path:/bundle
+    env_file:
+      - .dev.env
+    links:
+      - db:db
+    depends_on:
+      - db
+    networks:
+      - debitos_network
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      # - POSTGRES_HOST_AUTH_METHOD=trust
+      - POSTGRES_DB=sicode_development
+      - POSTGRES_USER=postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - 5454:5432
+    networks:
+      - debitos_network
+volumes:
+  pgdata:
+  # bundle_path:
+
+networks:
+  debitos_network:
